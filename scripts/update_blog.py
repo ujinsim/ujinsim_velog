@@ -3,8 +3,7 @@ import git
 import os
 
 # 벨로그 RSS 피드 URL
-# example : rss_url = 'https://api.velog.io/rss/@rimgosu'
-rss_url = 'https://api.velog.io/rss/@ujinsim'
+rss_url = 'https://api.velog.io/rss/@ujinsimss'
 
 # 깃허브 레포지토리 경로
 repo_path = '.'
@@ -39,7 +38,7 @@ for entry in feed.entries:
 
         # 깃허브 커밋
         repo.git.add(file_path)
-        repo.git.commit('-m', f'Add post: {entry.title}')
+        repo.git.commit('-m', f'Add post: {entry.title}\nCo-authored-by: rimgosu <newnyup@gmail.com>')
 
 # 변경 사항을 깃허브에 푸시
 repo.git.push()
