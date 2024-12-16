@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git push https://${{ secrets.GH_PAT_MORI }}@github.com/ujinsim/ujinsim_velog.git
+          git push https://${{ secrets.GH_PAT }}@github.com/ujinsim/ujinsim_velog.git
 
       - name: Set up Python
         uses: actions/setup-python@v2
